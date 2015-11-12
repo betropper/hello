@@ -16,7 +16,7 @@ func color(message string) {
 
 func main() {
 	if len(os.Args) > 1 {
-		color(os.Args[1])
+		color("Hello, " + os.Args[2] + "!")
 	} else {
 		plain()
 	}
