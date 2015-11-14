@@ -1,17 +1,36 @@
+/**
+ * Prints 'Hello, world!' in a variety of ways and demonstrates basic
+ * java knowledge
+ */
+
+
 import skilstak.c;
 
 public class hello {
-
+/**
+ * Functions to print a message, typically 'Hello, world!' in
+ * a variety of ways.
+ */
+    /**
+     * Prints the message repetedly in a number of colors in
+     * a 'nyan'-esque style.
+     */
     public static void color(String message) {
         System.out.println(c.clear);
         while (true) {
             System.out.print(c.rc() + message + " ");
         }
     }
-
+    /**
+     * Prints a message with no fanfare.
+     */
     public static void plain(String message) {
         System.out.println(c.clear + message);
     }
+
+    /**
+     * Prints a message, Las Vegas blinking sign style.
+     */
 
     public static void multi(String message) throws InterruptedException {
         while (true) {
@@ -19,6 +38,8 @@ public class hello {
             Thread.sleep(500);
         }
     }
+
+    /** Determines which arguments are options and which are a message */
 
     public static void main(String[] args) throws InterruptedException {
         String who = "world";
@@ -36,7 +57,7 @@ public class hello {
             }
         }
         
-        message = "Hello" + who + "!";
+        message = "Hello " + who + "!";
 
         if (option.equals("-m")) {
             multi(message);
