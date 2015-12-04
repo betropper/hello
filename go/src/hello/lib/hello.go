@@ -19,6 +19,7 @@ func color(message string) {
 func multi(message string) {
 	for {
 		fmt.Println(c.Clear + c.Multi(message))
+		time.Sleep(500 * time.Millisecond)
 	}
 }
 
