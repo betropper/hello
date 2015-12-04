@@ -1,36 +1,9 @@
 #!/usr/bin/env python3
-
-import skilstak.colors as c
-import time as t
-
-def plain(message):
-    "Normal message"
-    print(c.clear + c.rc() + message + c.reset)
-  
-def nyan(message):
-    "Nyan-esque message"
-    print(c.clear)
-    while True:
-        print(c.rc() + message, end = "  ")
-
-def ayylmao():
-    "ayy lmao"
-    print(c.clear + c.rc() + "ayy..")
-    t.sleep(1)
-    while True:
-        print(c.rc() + "LMAO", end = "")
-
-def multi(message):
-    "Multicoloredddddd"
-    while True:
-        print(c.clear + c.multi(message))
-    
-
+import lelstuff as l
 if __name__ == "__main__":
     import sys
     option = " "
     message = "Hello, world!"
-
 
     if len(sys.argv) > 2:
         if sys.argv[1].startswith("-"):
@@ -47,12 +20,12 @@ if __name__ == "__main__":
         message == "Hello, world!"
     try:
         if "ayy lmao" in message:
-            ayylmao()
+            l.ayylmao()
         elif option == "-n":
-            nyan(message)
+            l.nyan(message)
         elif option == "-m":
-            multi(message)
+            l.multi(message)
         else:
-            plain(message)
+            l.plain(message)
     except KeyboardInterrupt:
         exit()
