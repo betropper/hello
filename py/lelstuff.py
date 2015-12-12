@@ -24,3 +24,4 @@ def multi(message):
     while True:
         print(c.clear + c.multi(message))
         t.sleep(.5)
+
